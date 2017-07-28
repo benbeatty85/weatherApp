@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+}
+
+#header-text {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 100px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+}
+
+#header-paragraph {
+    font-family: 'Special Elite', sans-serif;
+    text-transform: capitalize;
+    font-size: 25px;
+    padding-bottom: 50px;
+    color: red;
+    text-shadow: 2px 2px #000;
+}
+
+#app {
+    display: flex;
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background: url('person.jpeg') no-repeat center;
+    background-size: cover;
+    max-width: 100%;
+    height: 900px;
+}
+
+button {
+    border-radius: 10px;
+    border: none;
+    padding: 12px;
+    background-color: blue;
+    width: 200px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Amatic SC', sans-serif;
+    
+}
+
+input[type=text] {
+    border-radius: 10px;
+    border: none;
+    padding: 18px;
+    width: 400px;
+    background-color: #fff;
+}
+
+.city-input {
+    font-size: 20px;
+    color: #000;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#overlay {
+    height: 100%;
+    width:100%;
+    background: rgba(0,0,0, .8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content:center;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #fff;
+    border-top-color: red;
+    border-radius: 100%;
+    margin-top: 500px;
+    animation: round 1s linear infinite;
+}
+    
+    @keyframes round {
+        from{transform: rotate(0deg)}
+        to {transform: rotate(360deg)}
+    }
+    
+    .city-weather {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 50px;
+        color: #fff;
+        font-family: 'Amatic SC', sans-serif;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+/*Media Queries*/
+
+
+@media screen and (max-width: 700px) {
+    #header-text {
+        text-align: center;
+    }
+    
+    #header-paragraph {
+        text-align: center;
+    }
+    
+    .city-weather {
+        font-size: 30px;
+        text-align: center;
+        padding-top: 40px;
+    }
+    
+    .city-input {
+    font-size: 10px;
+}
+
+input[type=text] {
+    padding: 15px;
+    width: 200px;
+}
+
+button {
+    padding: 15px;
+    width: 200px;
+    font-size: 20px;
+    
+}
+}
+
