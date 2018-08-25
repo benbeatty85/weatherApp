@@ -19,7 +19,7 @@ function getCoordinatesForCity(cityName) {
 }
  function getCurrentWeather(coords) {
      
-  // Template string again! I hope you can see how nicer this is :)
+  // Template string again! I hope you can see how nicer this is :) Easier to read
      
   var url = `${CORS_PROXY}${DARKSKY_API_URL}${DARKSKY_API_KEY}/${coords.lat},${coords.lng}?units=si&exclude=minutely,hourly,daily,alerts,flags`;
    return (
