@@ -2,7 +2,7 @@
 var DARKSKY_API_URL = 'https://api.darksky.net/forecast/';
 var DARKSKY_API_KEY = '990d09b1cfd3ab9d6820c3c4218e5396';
 var CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
- var GOOGLE_MAPS_API_KEY = 'AIzaSyAeDzNw1fhHS2JpHCurBBiScWZ6cIrR4jI';
+ var GOOGLE_MAPS_API_KEY = 'AIzaSyA6istYnAtEkidMk-vdzNUDpQHMxb_A9lI';
 var GOOGLE_MAPS_API_URL = 'https://maps.googleapis.com/maps/api/geocode/json';
     
  // This function returns a promise that will resolve with an object of lat/lng coordinates
