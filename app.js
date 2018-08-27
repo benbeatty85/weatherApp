@@ -34,7 +34,7 @@ var cityInput = cityForm.querySelector('.city-input');
 var cityWeather = app.querySelector('.city-weather');
  cityForm.addEventListener('submit', function(event) { // this line changes
      
-  event.preventDefault(); // prevent the form from submitting
+  event.preventDefault(); // prevent the form from submitting again
      
    // This code doesn't change!
      
