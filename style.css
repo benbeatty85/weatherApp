@@ -52,6 +52,7 @@ body {
     text-align: center;
     padding: 2em;
     max-width: 1200px;
+    overflow: hidden;
 }
 
 .loader {
