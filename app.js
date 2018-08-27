@@ -29,22 +29,31 @@ function getCoordinatesForCity(cityName) {
   );
 }
  var app = document.querySelector('#app');
-var cityForm = app.querySelector('.city-form');
-var cityInput = cityForm.querySelector('.city-input');
-var cityWeather = app.querySelector('.city-weather');
+ var cityForm = app.querySelector('.city-form');
+ var cityInput = cityForm.querySelector('.city-input');
+ var cityWeather = document.querySelector('.city-weather');
+ var loadingMessage = app.querySelector('.loader');
+    
+    
  cityForm.addEventListener('submit', function(event) { // this line changes
      
   event.preventDefault(); // prevent the form from submitting again
+     
+      // display the loader
+  loadingMessage.classList.add('active');
      
    // This code doesn't change!
      
   var city = cityInput.value;
    getCoordinatesForCity(city)
+     
   .then(getCurrentWeather)
   .then(function(weather) {
-    cityWeather.innerText = "The current temperature in " + cityInput.value + " is " + weather.temperature + "." + "\n" + " The windspeed is " + weather.windSpeed + " and the visibility is " + weather.visibility + "." + "\n" + "Go outside at your own risk Muah-ha ha ha!";
+    cityWeather.innerText = "The current temperature in " + city + " is " + weather.temperature + "." + "\n" + " The windspeed is " + weather.windSpeed + " and the visibility is " + weather.visibility + "." + "\n" + "Go outside at your own risk Muah-ha ha ha!";
+   }).then (function () {
+       loadingMessage.classList.remove('active');
+   });
   });
-});
     
  //random colour button
     
@@ -63,7 +72,6 @@ var cityWeather = app.querySelector('.city-weather');
  window.addEventListener('load', function () {
   overlay.style.display = 'none';
 });
-    
     
     
     
