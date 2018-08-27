@@ -2,12 +2,10 @@
 var DARKSKY_API_URL = 'https://api.darksky.net/forecast/';
 var DARKSKY_API_KEY = '990d09b1cfd3ab9d6820c3c4218e5396';
 var CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
- var GOOGLE_MAPS_API_KEY = 'IzaSyAeDzNw1fhHS2JpHCurBBiScWZ6cIrR4jI';
+ var GOOGLE_MAPS_API_KEY = 'AIzaSyBq-NG0bDBXjzObFmZYUcZT1YRCk8VpZOw';
 var GOOGLE_MAPS_API_URL = 'https://maps.googleapis.com/maps/api/geocode/json';
     
  // This function returns a promise that will resolve with an object of lat/lng coordinates
-    
-    //https://maps.googleapis.com/maps/api/geocode/json?address=montreal&key=AIzaSyA6istYnAtEkidMk-vdzNUDpQHMxb_A9lI
     
 function getCoordinatesForCity(cityName) {
   // This is an ES6 template string, much better than verbose string concatenation...
