@@ -42,7 +42,7 @@ var cityWeather = app.querySelector('.city-weather');
    getCoordinatesForCity(city)
   .then(getCurrentWeather)
   .then(function(weather) {
-    cityWeather.innerText = "The current temperature is " + weather.temperature + "." + "\n" + " The windspeed is " + weather.windSpeed + " and the visibility is " + weather.visibility + "." + "\n" + "Go outside at your own risk Muah-ha ha ha!";
+    cityWeather.innerText = "The current temperature in " + cityInput.value + " is " + weather.temperature + "." + "\n" + " The windspeed is " + weather.windSpeed + " and the visibility is " + weather.visibility + "." + "\n" + "Go outside at your own risk Muah-ha ha ha!";
   });
 });
     
@@ -66,4 +66,10 @@ var cityWeather = app.querySelector('.city-weather');
     
     
     
+    
  })();
+
+ function activatePlacesSearch () {
+        var input = document.getElementById('search_term');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+    }
