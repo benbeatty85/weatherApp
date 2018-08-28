@@ -49,7 +49,7 @@ function getCoordinatesForCity(cityName) {
      
   .then(getCurrentWeather)
   .then(function(weather) {
-    cityWeather.innerText = "The current temperature in " + city + " is " + weather.temperature + "." + "\n" + " The windspeed is " + weather.windSpeed + " and the visibility is " + weather.visibility + "." + "\n" + "Go outside at your own risk Muah-ha ha ha!";
+    cityWeather.innerText = "The current temperature in " + city + " is " + weather.temperature + "." + "\n" + " The windspeed is " + weather.windSpeed + " km's" +  "." + "\n" + "Go outside at your own risk Muah-ha ha ha!";
    }).then (function () {
        loadingMessage.classList.remove('active');
    });
